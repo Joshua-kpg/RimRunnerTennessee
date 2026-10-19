@@ -277,6 +277,9 @@ def merge(site, ledger, finals):
             continue
         if f["date"] < site.season_start:
             c["ignored"] += 1; continue
+        # Tennessee: a TSSAA member (site divisions 1-6) may not count a game before Mon Nov 16, 2026; games between two non-TSSAA schools still count.
+        if f["date"] < "2026-11-16" and any((site.slug2team.get(site.mp2slug.get(m)) or {}).get("division", 99) <= 6 for m in (f["homeMp"], f["awayMp"])):
+            c["ignored"] += 1; continue
         key = (frozenset((f["homeMp"], f["awayMp"])), f["date"])
         if key in pairdate and pairdate[key] != f["contestId"]:
             c["dup"] += 1; log(f"  dup: {f['contestId']} same pair+date as {pairdate[key]} (kept first)"); continue
