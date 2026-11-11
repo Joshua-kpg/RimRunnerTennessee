@@ -1,6 +1,21 @@
 {
  "about": "RimRunnerTennessee 2026-27 finals ledger, written by scripts/update_scores.py. Keyed by MaxPreps contest id. homeMp/awayMp are MaxPreps team ids. state: applied | unlisted (one team not in our list; counts for records only) | pending (final between listed teams with no scheduled game yet; awaiting team-page check) | ignored.",
  "finals": {
+  "3cc7f251-87a9-4476-98fb-b15ef213c990": {
+   "awayMp": "df744876-03b8-412d-aa69-fb925985d91b",
+   "awayScore": 43,
+   "date": "2026-11-10",
+   "forfeit": false,
+   "gameId": "tn26-mx001",
+   "gameType": "conference",
+   "homeMp": "3116a86c-73fe-4b9c-b6d6-70cce57f6054",
+   "homeScore": 34,
+   "neutral": false,
+   "source": "scores-page",
+   "state": "applied",
+   "verified": true,
+   "winner": "away"
+  },
   "48797c92-711a-47a9-8031-afc4fd3d8803": {
    "awayMp": "a2aa3cd8-99c0-4b92-b0bd-5780b4611d80",
    "awayScore": 56,
